@@ -14,7 +14,7 @@
                 <img src="./imagenes/logoKrakeDev.png" width="80%" />
             </div>
             <div class="contenedorBotones">
-                <input type="button" value="CUENTAS" class="boton" />
+                <input type="button" value="CUENTAS" class="boton" onclick="mostrarCuentas();"/>
                 <input type="button" value="TRANSACCIONES" class="boton" />
                 <input type="button" value="MOVIMIENTOS" class="boton" />
             </div>
@@ -31,6 +31,9 @@
                     <div class="etiquetaTexto">CAMPO 1</div>
                     <div class="cajaTexto">
                         <input type="text" class="caja" />
+                        <input type="button" value="BUSCAR CUENTA" onclick="buscarCuenta();"/>
+                        <input type="button" value="AGREGAR CUENTA" onclick="agregarCuenta();"/>
+                        <input type="button" value="AGREGAR" onclick="agregar();"/>
                     </div>
                 </div>
                 <div class="contenedorTexto">
@@ -52,6 +55,8 @@
 
             <div class="inferior">
                 TABLA
+                
+                <div id="tablaCuentas" class="areaTabla"></div>
             </div>
 
         </div>
