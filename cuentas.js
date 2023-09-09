@@ -72,24 +72,6 @@ buscarCuenta = function (numeroCuenta) {
     No retorna nada
 */
 agregarCuenta = function (cuenta) {
-    if (nuevoNumeroCuenta & nuevoNombre & nuevoApellido & nuevoSaldo) {
-        if (esNuevo) {
-            let nuevoCliente = {};
-            nuevoCliente.numeroCuenta = numeroCuentaCaja;
-            nuevoCliente.nombre = nombreCaja;
-            nuevoCliente.apellido = apellidoCaja;
-            nuevoCliente.saldo = saldoCaja;
-            nuevoCuenta = agregarCuentas(nuevoCliente);
-            if (nuevoCuenta) {
-                alert("CUENTA AGREGADA");
-                mostrarCuentas();
-            } else {
-                limpiarBoton();
-                alert("CUENTA EXISTENTE");
-            }
-        }
-    }
-    esNuevo = false;
 }
 
 
