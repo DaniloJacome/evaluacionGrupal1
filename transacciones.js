@@ -55,8 +55,8 @@ ejecutarBusqueda = function () {
 };
 
 depositar = function (numeroCuenta, monto) {
-  let cuentaAfectada = buscarCuenta();
-  let cuentaActual = monto + cuentaAfectada.numeroCuenta;
+  let cuentaAfectada = buscarCuenta(numeroCuenta);
+  let cuentaActual = monto + cuentaAfectada.saldo;
   return cuentaActual;
   //invoca a buscarCuenta, guarda el resultado en la variable cuentaAfectada;
   //Al saldo actual de la cuenta afectada, le suma el monto que recibe como parámetro
@@ -64,17 +64,11 @@ depositar = function (numeroCuenta, monto) {
 
 ejecutarDeposito = function () {
   let cuentaBusqueda = recuperarTexto("txtBuscarNumeroCuenta");
-  let montoIngresado = parseFloat(recuperarTexto("retxtMonto"));
+  let montoIngresado = parseFloat(recuperarTexto("txtMonto"));
   depositar(cuentaBusqueda, montoIngresado);
   //invoca a depositar
   //Muestra un mensaje TRANSACCION EXITOSA
   //Muestra en pantalla el nuevo saldo de la cuenta
-};
-
-depositar = function (numeroCuenta, monto) {
-  let cuentaAfectada;
-  //invoca a buscarCuenta, guarda el resultado en la variable cuentaAfectada;
-  //Al saldo actual de la cuenta afectada, le suma el monto que recibe como parámetro
 };
 
 retirar = function (numeroCuenta, monto) {
